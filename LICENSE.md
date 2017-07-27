@@ -1,6 +1,4 @@
-capistrano-postgresql is MIT licensed.
-
-Copyright (C) 2014 Bruno Sutic
+capistrano-sync-postgresql is MIT licensed.
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the "Software"),
