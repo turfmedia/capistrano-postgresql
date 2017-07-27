@@ -4,7 +4,7 @@ include Capistrano::SyncPostgresql::PsqlHelpers
 
 namespace :load do
   task :defaults do
-    set :filename, -> { "#{fetch(:pg_database_from)}-#{Time.now.strftime("%Y-%m-%d-%H-%M")}.sql.gz" }
+    set :filename, -> { "#{fetch(:application)}-#{fetch(:stage)}-#{Time.now.strftime("%Y-%m-%d-%H-%M")}.sql.gz" }
     set :remote_tmp_dir, '/tmp/'
     set :local_tmp_dir, 'tmp/'
     set :local_file, -> { "#{fetch(:local_tmp_dir)}#{fetch(:filename)}" }
