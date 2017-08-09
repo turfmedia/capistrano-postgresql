@@ -9,7 +9,7 @@ module Capistrano
 
       def pg_dump_to(file)
         conf = get_database_conf
-        execute "PGPASSWORD=#{conf['password']} pg_dump -O -h #{conf['host']} -U #{conf['username']} #{conf['database']} | gzip > #{file}"
+        execute "PGPASSWORD='#{conf['password']}'' pg_dump -O -h #{conf['host']} -U #{conf['username']} #{conf['database']} | gzip > #{file}"
       end
 
       private
